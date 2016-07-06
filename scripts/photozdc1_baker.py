@@ -31,7 +31,7 @@ def bake(zgrid):
     # instantiate photometric calculations
     pcalcs = {}
     for sedname, sed in sedLib.items():
-        pcalcs[sedname] = phot.PhotCalcs(sed, filterLib)
+        pcalcs[sedname] = phot.PhotCalcs(sed, filterLib, FAST_INTEG=True, INTEG_PREC=10000)
 
     nz = len(zgrid)
 
