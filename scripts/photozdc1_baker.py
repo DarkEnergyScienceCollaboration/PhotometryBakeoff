@@ -70,7 +70,7 @@ if __name__ == '__main__':
     with open('photozdc1_bakeoff_output.txt', 'w') as output:
         for ug, gr, ri, iz, zy, name, redshift, time in \
             zip(records['ug'], records['gr'], records['ri'], records['iz'],
-                records['iz'], records['sedname'], records['redshift'],
+                records['zy'], records['sedname'], records['redshift'],
                 records['time']):
             output.write('%e %e %e %e %e %s %e %e\n' %
                          (ug, gr, ri, iz, zy, name, redshift, time))
